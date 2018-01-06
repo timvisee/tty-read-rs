@@ -4,3 +4,5 @@ version = "0.1.0"
 authors = ["timvisee <timvisee@gmail.com>"]
 
 [dependencies]
+libc = "0.2"
+termios = "0.3"
