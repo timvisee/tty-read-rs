@@ -38,11 +38,14 @@ Example code in `main.rs`:
 ```rust
 extern crate tty_read;
 
-use tty_read::TermReader;
+use tty_read::{ReaderOptions, TermReader};
 
 fn main() {
+    // Configure reader options
+    let options = ReaderOptions::default();
+
     // Open a reader
-    let reader = TermReader::open_stdin()
+    let reader = TermReader::open_stdin(&options)
         .expect("failed to open stdin reader");
 
     // Read 5 bytes
@@ -57,10 +60,11 @@ fn main() {
 ## TODO
 - Configurable properties:
   - Print input characters or not.
-  - Cancel input when pressing CTRL+C or not.
+  - Cancel input when pressing CTRL+C or not, catch these by default.
   - Input timeout.
   - Lock `stdin` and/or `stdout`.
 - Support for Windows.
+- Input prompt (persistent or not).
 - Don't flush `stdin` when opening a reader.
 - Additional reading functions.
 - ...
