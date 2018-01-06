@@ -2,6 +2,10 @@
 name = "tty-read"
 version = "0.1.0"
 authors = ["timvisee <timvisee@gmail.com>"]
+description = "Read raw real-time input from the terminal"
+repository = "https://github.com/timvisee/tty-read-rs"
+readme = "README.md"
+keywords = ["read", "terminal", "tty", "raw", "realtime"]
 
 [dependencies]
 libc = "0.2"
